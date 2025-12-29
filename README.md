@@ -4,6 +4,12 @@ QuariX - Builds intelligent AI agents, chatbots, and custom web & mobile applica
 
 A modern web application built with Next.js, TypeScript, and Tailwind CSS.
 
+## Screenshot
+
+![QuariX Website Screenshot](./screenshots/screenshot.png)
+
+*Dark-themed landing page with modern design, featuring a hero section with "Plan. Build. Ship." headline and responsive layout.*
+
 ## Getting Started
 
 First, install the dependencies:
@@ -49,6 +55,11 @@ QuariX/
 - **TypeScript** - Type-safe JavaScript
 - **Tailwind CSS** - Utility-first CSS framework
 - **ESLint** - Code linting
+
+## Contributors
+
+- [@Gokulakrishnxn](https://github.com/Gokulakrishnxn)
+- [@claude](https://github.com/claude)
 
 ## Learn More
 
