@@ -1,5 +1,7 @@
 # QuariX
 
+QuariX - Builds intelligent AI agents, chatbots, and custom web & mobile applications for modern businesses.
+
 A modern web application built with Next.js, TypeScript, and Tailwind CSS.
 
 ## Getting Started
@@ -55,4 +57,3 @@ To learn more about Next.js, take a look at the following resources:
 - [Next.js Documentation](https://nextjs.org/docs)
 - [Learn Next.js](https://nextjs.org/learn)
 - [Next.js GitHub repository](https://github.com/vercel/next.js)
-
