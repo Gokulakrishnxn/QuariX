@@ -1,0 +1,199 @@
+# QuariX - LLM Context File
+
+## Project Overview
+
+QuariX is a modern web application built with Next.js 15, React 19, TypeScript, and Tailwind CSS. It provides professional and high-quality website AI agents, Chatbots, iOS, and Android application design development services.
+
+**Live URL**: quarix-gamma.vercel.app
+**Repository**: https://github.com/Gokulakrishnxn/QuariX
+
+## Tech Stack
+
+- **Framework**: Next.js 15.5.9 (App Router)
+- **UI Library**: React 19
+- **Language**: TypeScript 5.7.2
+- **Styling**: Tailwind CSS 3.4.17
+- **UI Components**: shadcn/ui (New York style)
+- **Theme Management**: next-themes 0.4.6
+- **Icons**: Lucide React
+- **Animation**: tailwindcss-animate
+
+## Project Structure
+
+```
+QuariX/
+├── app/                    # Next.js App Router
+│   ├── layout.tsx         # Root layout with ThemeProvider and Navbar
+│   ├── page.tsx           # Home page with HeroSection
+│   └── globals.css        # Global styles with Tailwind and theme variables
+├── components/            # React components
+│   ├── navbar.tsx         # Main navigation bar with theme-aware logo
+│   ├── hero-section.tsx   # Hero section with grid background patterns
+│   ├── theme-provider.tsx # Theme context provider wrapper
+│   ├── theme-toggle.tsx   # Dark/Light mode toggle button with sound
+│   └── ui/                # shadcn/ui components
+│       ├── button.tsx
+│       ├── card.tsx
+│       └── navigation-menu.tsx
+├── lib/
+│   └── utils.ts           # Utility functions (cn helper)
+├── public/                # Static assets
+│   ├── QLighttxtlogo.png  # Light mode logo
+│   ├── Qdarktxtlogo.png   # Dark mode logo
+│   ├── lightanime.jpg     # Dark mode hero image
+│   ├── darkanime.jpg      # Light mode hero image
+│   └── audio/
+│       └── ui-sounds/
+│           └── click.wav  # Theme toggle sound effect
+├── screenshots/
+│   └── Screenshot.png     # Project screenshot
+├── components.json        # shadcn/ui configuration
+├── tailwind.config.ts     # Tailwind CSS configuration
+├── tsconfig.json          # TypeScript configuration
+└── next.config.ts         # Next.js configuration
+
+```
+
+## Key Features
+
+### 1. Theme System
+- **Dark Mode**: Pure black background (#000000)
+- **Light Mode**: White background
+- **Theme Toggle**: Circular button with sun/moon icons
+- **Sound Effect**: Click sound on theme toggle
+- **Logo Switching**: Different logos for light/dark modes
+  - Light mode: Qdarktxtlogo.png
+  - Dark mode: QLighttxtlogo.png
+
+### 2. Navigation Bar
+- Sticky navigation with backdrop blur
+- Responsive design with mobile menu
+- Navigation links: Home, Products (dropdown), About, Contact
+- Theme toggle button
+- "Get Started" CTA button
+- Logo that switches based on theme
+
+### 3. Hero Section
+- Left-aligned content layout
+- Headline: "Plan. Build. Ship." (white text)
+- Service description
+- "Responsive Design - Optimized for all devices" feature highlight
+- Two CTA buttons: "Get Started" and "Learn More"
+- Right side: Theme-aware hero image
+  - Light mode: darkanime.jpg
+  - Dark mode: lightanime.jpg
+- Background: Subtle blueprint grid pattern with golden ratio spiral overlay
+
+### 4. Background Patterns
+- Blueprint grid pattern (40px grid, very low opacity)
+- Thin geometric lines (horizontal and vertical)
+- Golden ratio spiral overlay (SVG-based)
+- All patterns use monochrome colors with very low opacity
+- Futuristic tech aesthetic
+
+## Component Details
+
+### Navbar Component (`components/navbar.tsx`)
+- Uses `next-themes` for theme detection
+- Dynamically switches logo based on theme
+- Responsive mobile menu with hamburger icon
+- Navigation menu with dropdown for Products
+- All links use modern Next.js Link API (no legacyBehavior)
+
+### Hero Section Component (`components/hero-section.tsx`)
+- Client component with theme detection
+- Two-column grid layout (text left, image right)
+- Theme-aware hero images
+- Background pattern overlays
+- Responsive design
+
+### Theme Toggle Component (`components/theme-toggle.tsx`)
+- Circular button design
+- Smooth icon transitions (sun ↔ moon)
+- Click sound effect on toggle
+- Handles hydration properly
+
+## Styling
+
+### Color Scheme
+- **Dark Mode Background**: #000000 (pure black)
+- **Light Mode Background**: #ffffff (white)
+- Uses CSS variables for theming
+- shadcn/ui color system with neutral base
+
+### Typography
+- System fonts with antialiasing
+- Responsive text sizes
+- Gradient text for headlines
+
+## Configuration Files
+
+### `components.json`
+- shadcn/ui configuration
+- Style: "new-york"
+- Base color: "neutral"
+- CSS variables enabled
+- Icon library: lucide
+
+### `tailwind.config.ts`
+- Dark mode: class-based
+- Extended color system with theme variables
+- Border radius variables
+- tailwindcss-animate plugin
+
+### `tsconfig.json`
+- Module resolution: bundler
+- Path aliases: @/* → ./*
+- Excludes node_modules
+- Strict TypeScript enabled
+
+## Scripts
+
+- `npm run dev` - Development server (localhost:3000)
+- `npm run build` - Production build
+- `npm run start` - Production server
+- `npm run lint` - ESLint check
+
+## Important Notes
+
+1. **Theme Detection**: Uses `resolvedTheme` to properly detect dark mode even with system preference
+2. **Logo Switching**: Logos are swapped (light logo for dark mode, dark logo for light mode)
+3. **Image Optimization**: Uses Next.js Image component for optimized loading
+4. **Accessibility**: Proper ARIA labels and semantic HTML
+5. **Responsive**: Mobile-first design with breakpoints
+
+## Dependencies
+
+### Core
+- next@15.1.6
+- react@19.0.0
+- react-dom@19.0.0
+- next-themes@0.4.6
+
+### UI Components
+- @radix-ui/react-navigation-menu
+- @radix-ui/react-slot
+- lucide-react
+- tailwindcss-animate
+
+### Utilities
+- clsx
+- tailwind-merge
+- class-variance-authority
+
+## Development Notes
+
+- All components use TypeScript
+- Client components marked with "use client"
+- Modern Next.js App Router patterns
+- No deprecated APIs (legacyBehavior removed)
+- ESLint configured with Next.js rules
+- Build succeeds without errors
+
+## Repository Information
+
+- **Main Branch**: main
+- **Claude Branch**: claude
+- **License**: MIT
+- **Contributors**: @Gokulakrishnxn, @claude
+
