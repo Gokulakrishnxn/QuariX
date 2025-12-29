@@ -6,7 +6,7 @@ A modern web application built with Next.js, TypeScript, and Tailwind CSS.
 
 ## Screenshot
 
-![QuariX Website Screenshot](./screenshots/screenshot.png)
+![QuariX Website Screenshot](./screenshots/Screenshot.png)
 
 *Dark-themed landing page with modern design, featuring a hero section with "Plan. Build. Ship." headline and responsive layout.*
 
